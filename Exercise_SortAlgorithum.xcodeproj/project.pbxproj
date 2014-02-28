@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEA4529E18BD898B00D10A23 /* MyData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA4529C18BD898B00D10A23 /* MyData.cpp */; };
 		CEB2E72E18BD108600B82115 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB2E72D18BD108600B82115 /* main.cpp */; };
 		CEB2E73018BD108600B82115 /* test.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CEB2E72F18BD108600B82115 /* test.1 */; };
 /* End PBXBuildFile section */
@@ -25,7 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CEB2E72A18BD108600B82115 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA4529C18BD898B00D10A23 /* MyData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyData.cpp; sourceTree = "<group>"; };
+		CEA4529D18BD898B00D10A23 /* MyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyData.h; sourceTree = "<group>"; };
+		CEB2E72A18BD108600B82115 /* Exercise_SortAlgorithum */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Exercise_SortAlgorithum; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB2E72D18BD108600B82115 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CEB2E72F18BD108600B82115 /* test.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = test.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,7 +47,7 @@
 		CEB2E72118BD108600B82115 = {
 			isa = PBXGroup;
 			children = (
-				CEB2E72C18BD108600B82115 /* test */,
+				CEB2E72C18BD108600B82115 /* Exercise_SortAlgorithum */,
 				CEB2E72B18BD108600B82115 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,26 +55,28 @@
 		CEB2E72B18BD108600B82115 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEB2E72A18BD108600B82115 /* test */,
+				CEB2E72A18BD108600B82115 /* Exercise_SortAlgorithum */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEB2E72C18BD108600B82115 /* test */ = {
+		CEB2E72C18BD108600B82115 /* Exercise_SortAlgorithum */ = {
 			isa = PBXGroup;
 			children = (
 				CEB2E72D18BD108600B82115 /* main.cpp */,
+				CEA4529C18BD898B00D10A23 /* MyData.cpp */,
+				CEA4529D18BD898B00D10A23 /* MyData.h */,
 				CEB2E72F18BD108600B82115 /* test.1 */,
 			);
-			path = test;
+			path = Exercise_SortAlgorithum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEB2E72918BD108600B82115 /* test */ = {
+		CEB2E72918BD108600B82115 /* Exercise_SortAlgorithum */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEB2E73318BD108600B82115 /* Build configuration list for PBXNativeTarget "test" */;
+			buildConfigurationList = CEB2E73318BD108600B82115 /* Build configuration list for PBXNativeTarget "Exercise_SortAlgorithum" */;
 			buildPhases = (
 				CEB2E72618BD108600B82115 /* Sources */,
 				CEB2E72718BD108600B82115 /* Frameworks */,
@@ -81,9 +86,9 @@
 			);
 			dependencies = (
 			);
-			name = test;
+			name = Exercise_SortAlgorithum;
 			productName = test;
-			productReference = CEB2E72A18BD108600B82115 /* test */;
+			productReference = CEB2E72A18BD108600B82115 /* Exercise_SortAlgorithum */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +100,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = ChengJY;
 			};
-			buildConfigurationList = CEB2E72518BD108600B82115 /* Build configuration list for PBXProject "test" */;
+			buildConfigurationList = CEB2E72518BD108600B82115 /* Build configuration list for PBXProject "Exercise_SortAlgorithum" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -107,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEB2E72918BD108600B82115 /* test */,
+				CEB2E72918BD108600B82115 /* Exercise_SortAlgorithum */,
 			);
 		};
 /* End PBXProject section */
@@ -118,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB2E72E18BD108600B82115 /* main.cpp in Sources */,
+				CEA4529E18BD898B00D10A23 /* MyData.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,21 +201,21 @@
 		CEB2E73418BD108600B82115 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Exercise_SortAlgorithum;
 			};
 			name = Debug;
 		};
 		CEB2E73518BD108600B82115 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Exercise_SortAlgorithum;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEB2E72518BD108600B82115 /* Build configuration list for PBXProject "test" */ = {
+		CEB2E72518BD108600B82115 /* Build configuration list for PBXProject "Exercise_SortAlgorithum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEB2E73118BD108600B82115 /* Debug */,
@@ -218,13 +224,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEB2E73318BD108600B82115 /* Build configuration list for PBXNativeTarget "test" */ = {
+		CEB2E73318BD108600B82115 /* Build configuration list for PBXNativeTarget "Exercise_SortAlgorithum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEB2E73418BD108600B82115 /* Debug */,
 				CEB2E73518BD108600B82115 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEB2E72918BD108600B82115"
-               BuildableName = "test"
-               BlueprintName = "test"
-               ReferencedContainer = "container:test.xcodeproj">
+               BuildableName = "Exercise_SortAlgorithum"
+               BlueprintName = "Exercise_SortAlgorithum"
+               ReferencedContainer = "container:Exercise_SortAlgorithum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEB2E72918BD108600B82115"
-            BuildableName = "test"
-            BlueprintName = "test"
-            ReferencedContainer = "container:test.xcodeproj">
+            BuildableName = "Exercise_SortAlgorithum"
+            BlueprintName = "Exercise_SortAlgorithum"
+            ReferencedContainer = "container:Exercise_SortAlgorithum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEB2E72918BD108600B82115"
-            BuildableName = "test"
-            BlueprintName = "test"
-            ReferencedContainer = "container:test.xcodeproj">
+            BuildableName = "Exercise_SortAlgorithum"
+            BlueprintName = "Exercise_SortAlgorithum"
+            ReferencedContainer = "container:Exercise_SortAlgorithum.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEB2E72918BD108600B82115"
-            BuildableName = "test"
-            BlueprintName = "test"
-            ReferencedContainer = "container:test.xcodeproj">
+            BuildableName = "Exercise_SortAlgorithum"
+            BlueprintName = "Exercise_SortAlgorithum"
+            ReferencedContainer = "container:Exercise_SortAlgorithum.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
