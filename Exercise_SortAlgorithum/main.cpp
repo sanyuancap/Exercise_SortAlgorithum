@@ -162,7 +162,7 @@ void Bubble2Sort(int* pData,int Count)
     }while(left <= right);
 }
 
-//SHELL
+//SHELL 稳定的插入排序
 void ShellSort(int* pData,int Count)
 {
     int step[4];
@@ -239,9 +239,111 @@ void QuickSort_Temp(T* pData,int Count)
     runTemp(pData,0,Count-1);
 }
 
+//归并排序
+//将有二个有序数列a[first...mid]和a[mid...last]合并。
+void mergearray(int a[], int first, int mid, int last, int temp[])
+{
+	int i = first, j = mid + 1;
+	int m = mid,   n = last;
+	int k = 0;
+	
+	while (i <= m && j <= n)    //添加进temp数组
+	{
+		if (a[i] <= a[j])
+			temp[k++] = a[i++];
+		else
+			temp[k++] = a[j++];
+	}
+	
+	while (i <= m)  //a[i]的后续清理工作
+		temp[k++] = a[i++];
+	
+	while (j <= n)  //b[j]的后续清理工作
+		temp[k++] = a[j++];
+	
+	for (i = 0; i < k; i++) //将tmep[]放回到a[]中
+		a[first + i] = temp[i];
+}
+//归并排序
+void mergesort(int a[], int first, int last, int temp[])
+{
+	if (first < last)
+	{
+		int mid = (first + last) / 2;
+		mergesort(a, first, mid, temp);    //左边有序
+		mergesort(a, mid + 1, last, temp); //右边有序
+		mergearray(a, first, mid, last, temp); //再将二个有序数列合并
+	}
+}
+//归并排序
+bool MergeSort(int a[], int n)
+{
+	int *p = new int[n];
+	if (p == NULL)
+		return false;
+	mergesort(a, 0, n - 1, p);
+	delete[] p;
+	return true;
+}
+
+
+//堆排序
+void HeapAdjust(int *a,int i,int size)  //调整堆
+{
+    int lchild=2*i;       //i的左孩子节点序号
+    int rchild=2*i+1;     //i的右孩子节点序号
+    int max=i;            //临时变量
+    if(i<=size/2)          //如果i是叶节点就不用进行调整
+    {
+        if(lchild<=size&&a[lchild]>a[max])
+        {
+            max=lchild;
+        }
+        if(rchild<=size&&a[rchild]>a[max])
+        {
+            max=rchild;
+        }
+        if(max!=i)
+        {
+            swap(a[i],a[max]);
+            HeapAdjust(a,max,size);    //避免调整之后以max为父节点的子树不是堆
+        }
+    }
+}
+
+//堆排序
+void BuildHeap(int *a,int size)    //建立堆
+{
+    int i;
+    for(i=size/2;i>=1;i--)    //非叶节点最大序号值为size/2
+    {
+        HeapAdjust(a,i,size);
+    }
+}
+
+//堆排序
+void HeapSort(int *a,int size)    //堆排序
+{
+    int i;
+    BuildHeap(a,size);
+    for(i=size;i>=1;i--)
+    {
+        //cout<<a[1]<<" ";
+        swap(a[1],a[i]);           //交换堆顶和最后一个元素，即每次将剩余元素中的最大者放到最后面
+        //BuildHeap(a,i-1);        //将余下元素重新建立为大顶堆
+        HeapAdjust(a,1,i-1);      //重新调整堆顶节点成为大顶堆
+    }
+}
+
+
 int main(int argc, const char * argv[])
 {
-    int data[] = {4,58,9,4,9,11,17};
+    int data[] = {4,3,1,7,6,2,8};
+    
+    //before
+    for (int i = 0;i < 7;i++)
+        cout<<data[i]<<" ";
+    cout<<"\n";
     
 //    BubbleSort(data,7);
 //    ExchangeSort(data,7);
@@ -249,28 +351,40 @@ int main(int argc, const char * argv[])
 //    InsertSort(data,7);
 //    QuickSort(data,7);
 //    Bubble2Sort(data,7);
-    ShellSort(data,7);
+//    ShellSort(data,7);
+//    MergeSort(data, 7);
+    HeapSort(data, 7);
     
+    //after
     for (int i = 0;i < 7;i++)
         cout<<data[i]<<" ";
     cout<<"\n";
     
-//    CMyData data[] = {
-//        CMyData(4,"xulion"),
-//        CMyData(5,"sanzoo"),
-//        CMyData(9,"wangjun"),
-//        CMyData(2,"VCKBASE"),
-//        CMyData(3,"jacky2000"),
-//        CMyData(1,"cwally"),
-//        CMyData(17,"VCUSER"),
-//    };
-//    
-//    QuickSort_Temp(data,7);
-//    
-//    for (int i=0;i<7;i++)
-//        cout<<data[i].m_iIndex<<" "<<data[i].GetData()<<" "<<"\n";
-//    cout<<"\n";
+    //模板
+    /*
+    CMyData data[] = {
+        CMyData(4,"xulion"),
+        CMyData(5,"sanzoo"),
+        CMyData(9,"wangjun"),
+        CMyData(2,"VCKBASE"),
+        CMyData(3,"jacky2000"),
+        CMyData(1,"cwally"),
+        CMyData(17,"VCUSER"),
+    };
     
+    QuickSort_Temp(data,7);
+    
+    for (int i=0;i<7;i++)
+        cout<<data[i].m_iIndex<<" "<<data[i].GetData()<<" "<<"\n";
+    cout<<"\n";
+    */
+    
+    
+    MergeSort(data, 7);
+    //after
+    for (int i = 0;i < 7;i++)
+        cout<<data[i]<<" ";
+    cout<<"\n";
     return 0;
 }
 
